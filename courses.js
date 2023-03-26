@@ -3,6 +3,8 @@ let form = document.querySelector(".form-post");
 let formSubmit = document.querySelector(".form-submit");
 let updateId = null;
 
+//tất cả giải thích đều ở file README
+
 async function addCourses({
   image,
   title,
@@ -54,6 +56,8 @@ form.addEventListener("submit", async function (e) {
     : await addCourses(courses);
   this.reset();
   await getCourses(render);
+  updateId = null;
+  formSubmit.textContent = "Add courses";
 });
 
 async function getCourses(callback) {
