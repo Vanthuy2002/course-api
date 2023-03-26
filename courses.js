@@ -2,6 +2,7 @@ let api = "http://localhost:3456/courses";
 let form = document.querySelector(".form-post");
 let formSubmit = document.querySelector(".form-submit");
 let updateId = null;
+let filterInput = document.querySelector("input[name=filter]");
 
 //tất cả giải thích đều ở file README
 
@@ -143,10 +144,10 @@ function render(courses) {
     return `<div class="course-item">
     <div class="course-image">
       <img src="${course.image}" alt="" />
-      <button class="course-remove" data-id="${course.id}">
+      <button class="course-remove" title="remove" data-id="${course.id}">
       <i class="fa fa-times"></i>
       </button>
-      <button class="course-edit" data-id="${course.id}">
+      <button class="course-edit" title="edit" data-id="${course.id}">
       <i class="fa fa-pencil"></i>
       </button>
     </div>
@@ -166,3 +167,9 @@ function render(courses) {
   listCourses.innerHTML = html.join("");
 }
 getCourses(render);
+
+filterInput.addEventListener("keyup", async (e) => {
+  let reponse = await fetch(`${api}?title_like=${e.target.value}`);
+  let data = await reponse.json();
+  render(data);
+});

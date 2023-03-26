@@ -130,3 +130,18 @@ body {
   color: #999;
   font-weight: 300;
 }
+.filter-wrapper {
+  display: flex;
+}
+input[name="filter"] {
+  width: 30%;
+  margin: auto;
+  outline: none;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  padding: 10px 15px;
+}
+input[name="filter"]::placeholder {
+  font-style: italic;
+  font-size: 12px;
+}
