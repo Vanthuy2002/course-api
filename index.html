@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Courses with API</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+      integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./main.css" />
+  </head>
+  <body>
+    <form class="form-post" autocomplete="off">
+      <input type="text" name="image" placeholder="Image url" />
+      <input type="text" name="title" placeholder="Enter your title" />
+      <input type="text" name="author" placeholder="Enter your author" />
+      <input type="text" name="rating" placeholder="Rating" min="1" max="5" />
+      <input type="text" name="price" placeholder="Price" min="1" />
+      <div class="check">
+        <label for="">Best Seller</label>
+        <input type="checkbox" name="bestSeller" />
+      </div>
+      <input type="text" name="buy" placeholder="Buy amount" value="0" />
+      <button type="submit" class="form-submit">Add course</button>
+    </form>
+
+    <div class="course-list"></div>
+    <script src="./courses.js"></script>
+  </body>
+</html>
