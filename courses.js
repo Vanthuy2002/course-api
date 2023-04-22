@@ -1,4 +1,4 @@
-let api = "http://localhost:3456/courses";
+let api = "https://my-json-server.typicode.com/Vanthuy2002/fake-api/courses";
 let form = document.querySelector(".form-post");
 let formSubmit = document.querySelector(".form-submit");
 let updateId = null;
@@ -164,6 +164,7 @@ function render(courses) {
     </div>
   </div>`;
   });
+
   listCourses.innerHTML = html.join("");
 }
 getCourses(render);
